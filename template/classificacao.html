@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Classificação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/classificacao.css') }}">
+</head>
+
+<body>
+
+    <header class="topo">
+        <div class="logo">
+            <img src="https://www.precisaocortelaser.com.br/wp-content/uploads/2020/07/logo-senai-1.png" alt="">
+        </div>
+
+        <div class="curso">
+            <h2>{{ turma }}</h2>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="sair">
+            <button class="sair">
+                <img src="https://cdn-icons-png.flaticon.com/128/126/126467.png" alt="">
+            </button>
+        </a>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+    </header>
+
+
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Média</th>
+                <th>Frequência</th>
+                <th>Classificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in alunos %}
+            <tr>
+                <td>{{ a.nome }}</td>
+                <td>{{ a.media }}</td>
+                <td>{{ a.freq }}</td>
+                <td>{{ a.classificacao }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

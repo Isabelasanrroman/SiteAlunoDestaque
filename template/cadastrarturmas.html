@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Turmas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrarturmas.css') }}">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="container">
+
+            <div class="logo">
+                <img src="https://www.precisaocortelaser.com.br/wp-content/uploads/2020/07/logo-senai-1.png">
+            </div>
+
+            <div class="card">
+                <h2>CADASTRAR TURMA</h2>
+
+                <form method="POST" action="{{ url_for('cadastrar_turmas') }}" enctype="multipart/form-data">
+
+                    <div class="input">
+                        <span>Turma</span>
+                        <input type="text" name="turma" required>
+                    </div>
+
+                    <div class="upload">
+                        Envie o arquivo CSV:
+                        <input type="file" name="arquivo" id="arquivo" accept=".csv" required>
+                        <p id="nomeArquivo"></p>
+                    </div>
+
+                    <button type="submit">CADASTRAR</button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

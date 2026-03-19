@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno Destaque</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+
+<body>
+    <div class="background">
+        <div class="card">
+            <div class="logo">
+                <img src="https://www.precisaocortelaser.com.br/wp-content/uploads/2020/07/logo-senai-1.png"
+                    alt="Logo SENAI">
+            </div>
+
+            <div class="texto">
+                <p>Cadastre os alunos de cada turma,</p>
+                <p>faça upload de suas planilhas e</p>
+                <p>receba a <strong>classificação dos alunos destaques</strong>.</p>
+            </div>
+
+            <div class="botoes">
+                <a href="{{ url_for('entrar') }}">
+                    <button class="entrar">Entrar</button>
+                </a>
+
+                <a href="{{ url_for('cadastrar') }}">
+                    <button class="cadastrar">Cadastrar</button>
+                </a>
+            </div>
+
+            <footer>
+                Sistema de Classificação Escolar - SENAI
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

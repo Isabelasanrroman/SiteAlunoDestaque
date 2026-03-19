@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/entrar.css') }}">
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="container">
+
+            <div class="logo">
+                <img src="https://www.precisaocortelaser.com.br/wp-content/uploads/2020/07/logo-senai-1.png"
+                    alt="">
+            </div>
+
+            <div class="card">
+                <h2>ENTRE NA SUA CONTA</h2>
+
+                <form method="POST" action="{{ url_for('entrar') }}">
+
+                    <div class="input">
+                        <span>Email</span>
+                        <input type="email" name="email">
+                    </div>
+
+                    <div class="input">
+                        <span>Senha</span>
+                        <input type="password" name="senha">
+                    </div>
+
+                    <button type="submit">ENTRAR</button>
+
+                </form>
+
+                <p class="login">
+                    Não possui uma conta? <a href="{{ url_for('cadastrar') }}">Cadastre-se</a>
+                </p>
+
+            </div>
+        </div>
+
+
+</body>
+
+</html>

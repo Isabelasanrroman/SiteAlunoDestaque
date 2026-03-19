@@ -1,0 +1,134 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #ededed;
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background-image: url(../../static/imagens/fundo.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;
+        }
+
+        .logo {
+            width: 100%;
+            padding: 20px;
+            margin-left: 18px;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        .sair button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sair img {
+            width: 18px;
+        }
+
+        main {
+            display: flex;
+            padding: 80px 100px;
+        }
+
+        .lista {
+            width: 340px;
+            height: 100%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 50px 45px;
+            box-shadow: 0 0 15px rgba(30, 30, 30, 0.091);
+        }
+
+        .btn-turma-item {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #ffffff;
+            color: rgb(129, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .btn-turma-item:hover {
+            background-color: #e7e7e7;
+        }
+
+        .conteudo {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .medalhas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-left: 60px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .box {
+            background: transparent;
+            padding: 15px;
+        }
+
+        .box img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .box p {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .box span {
+            color: #d10000;
+            font-weight: bold;
+        }
+
+        .btn-fixo {
+            align-self: flex-end;
+        }
+
+        .btn-fixo button {
+            background: #d10000;
+            color: #fff;
+            border: 2px solid #b10000;
+            padding: 14px 35px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.25s;
+            margin-left: 90px;
+            margin-bottom: 25px;
+        }
+
+        .btn-fixo button:hover {
+            background: transparent;
+            color: #b00000;
+            border: 2px solid #b00000;
+        }

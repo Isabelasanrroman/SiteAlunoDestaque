@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    background: url("../../static/imagens/fundo3.png") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.505);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 50px 40px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(16, 16, 16, 0.29);
+    animation: surgir 0.8s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    width: 230px;
+    margin-bottom: 25px;
+}
+
+.texto p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.texto p strong {
+    color: #c00000;
+}
+
+.botoes {
+    margin-top: 35px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.botoes button {
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid rgb(217, 42, 42);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.entrar {
+    background: #e60000;
+    color: white;
+    box-shadow: 0 6px 15px rgba(230, 0, 0, 0.35);
+}
+
+.entrar:hover {
+    background: #b80000;
+    transform: translateY(-2px);
+}
+
+.cadastrar {
+    background: white;
+    color: #b80000;
+    border: 2px solid #b80000;
+}
+
+.cadastrar:hover {
+    background: #b80000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
+}

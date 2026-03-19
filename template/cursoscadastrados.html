@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turmas Cadastradas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cursoscadastrados.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://www.precisaocortelaser.com.br/wp-content/uploads/2020/07/logo-senai-1.png" alt="Logo SENAI">
+        </div>
+
+        <div class="sair">
+             <a href="{{ url_for('index') }}">
+                <button>
+                    <img src="https://cdn-icons-png.flaticon.com/128/126/126467.png" alt="">
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="lista" id="listaTurmas">
+            {% for turma in turmas %}
+                <a href="{{ url_for('ver_classificacao', id_turma=turma.id) }}" class="link-turma">
+                    <button class="btn-turma-item">
+                        {{ turma.nome }}
+                    </button>
+                </a>
+            {% endfor %}
+
+            {% if not turmas %}
+                <p style="color: white; padding: 20px;">Nenhuma turma encontrada.</p>
+            {% endif %}
+        </div>
+
+        <div class="conteudo">
+            <div class="medalhas">
+                <div class="box">
+                    <img src="{{ url_for('static', filename='imagens/medalha1.png') }}" alt="">
+                    <p><span>Média</span> >= 95</p>
+                    <p><span>Frequência</span> = 100%</p>
+                    <p>Todos os <span>Cursos EADs</span> disponíveis devem ser completados</p>
+                </div>
+
+                <div class="box">
+                    <img src="{{ url_for('static', filename='imagens/medalha3.png') }}" alt="">
+                    <p><span>Média</span> >= 95</p>
+                    <p><span>Frequência</span> >= 97%</p>
+                    <p>Todos os <span>Cursos EADs</span> disponíveis devem ser completados</p>
+                </div>
+
+                <div class="box">
+                    <img src="{{ url_for('static', filename='imagens/medalha2.png') }}" alt="">
+                    <p><span>Média</span> >= 95</p>
+                    <p><span>Frequência</span> >= 95%</p>
+                    <p>Todos os <span>Cursos EADs</span> disponíveis devem ser completados</p>
+                </div>
+            </div>
+
+           <a href="{{ url_for('cadastrar_turmas') }}" class="btn-fixo">
+                <button class="btn-fixo">CADASTRAR TURMA</button>
+            </a>
+
+            <a href="{{ url_for('static', filename='manual.pdf') }}" download class="btn-fixo">
+                <button class="manual">BAIXAR MANUAL</button>
+            </a>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='java_script/cursoscadastrados.js') }}"></script>
+
+</body>
+</html>
